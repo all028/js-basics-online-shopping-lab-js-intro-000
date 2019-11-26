@@ -72,7 +72,7 @@ function removeFromCart(item) {
 
   if (found > -1){
     cart.splice(found,1);
-    return cart;  
+    return cart;
   }
 
 
