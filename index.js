@@ -63,35 +63,16 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var found  =cart.indexOf(item);
-//  var found = cart.findIndex(x => x.itemName ===item);
+  var found = cart.findIndex(x => x.itemName ===item);
+
   if (found == -1){
     return "That item is not in your cart."
   }
-
 
   if (found > -1){
     cart.splice(found,1);
     return cart;
   }
-
-
-
-
-/*
-  if (found == -1){
-    return "That item is not in your cart."
-  }else{
-
-     for (let i = 0; i < cart.length;i++){
-       if (cart[i].itemName == item){
-         cart.splice(i,11);
-
-         break;
-       }//end if
-     }//end for
-     return cart;
-  }*/
 }//end function
 
 function placeOrder(cardNumber) {
