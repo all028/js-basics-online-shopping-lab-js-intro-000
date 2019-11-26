@@ -64,19 +64,17 @@ function total() {
 
 function removeFromCart(item) {
 
-  var index = cart.findIndex(x => x.itemName ===item);
-  return index;
+  var found = cart.findIndex(x => x.itemName ===item);
+  if (found == -1){
+    return "That item is not in your cart."
+  }
 
 
-  for (let i = 0; i < cart.length;i++){
-    if (cart[i].itemName == item){
-      cart.splice(i,1);
-      return cart;
-    }else{
-      return "That item is not in your cart."
-    }
+  if (found > -1){
+    cart.splice(found,1);
+    return cart;  
+  }
 
-  }//end for
 
 
 
