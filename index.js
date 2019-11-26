@@ -63,8 +63,8 @@ function total() {
 }
 
 function removeFromCart(item) {
-
-  var found = cart.findIndex(x => x.itemName ===item);
+  var found  =cart.indexOf(item);
+//  var found = cart.findIndex(x => x.itemName ===item);
   if (found == -1){
     return "That item is not in your cart."
   }
@@ -78,7 +78,7 @@ function removeFromCart(item) {
 
 
 
-/*  var found  =cart.indexOf(item);
+/* 
   if (found == -1){
     return "That item is not in your cart."
   }else{
